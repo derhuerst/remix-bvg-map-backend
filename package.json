@@ -1,0 +1,32 @@
+{
+	"private": true,
+	"name": "remix-bvg-map-backend",
+	"description": "The backend of a website that allows you to remix the BVG transit map.",
+	"version": "0.1.0",
+	"main": "index.js",
+	"keywords": [
+		"public transport",
+		"transit",
+		"map",
+		"metro",
+		"remix"
+	],
+	"author": "Jannis R <mail@jannisr.de>",
+	"homepage": "https://github.com/derhuerst/remix-bvg-map-backend",
+	"repository": "derhuerst/remix-bvg-map-backend",
+	"bugs": "https://github.com/derhuerst/remix-bvg-map-backend/issues",
+	"license": "ISC",
+	"engines": {
+		"node": ">=6"
+	},
+	"dependencies": {
+		"compression": "^1.7.2",
+		"corser": "^2.0.1",
+		"express": "^4.16.3",
+		"hsts": "^2.1.0",
+		"serve-static": "^1.13.2"
+	},
+	"scripts": {
+		"start": "node index.js"
+	}
+}
