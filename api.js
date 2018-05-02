@@ -1,7 +1,7 @@
 'use strict'
 
 const express = require('express')
-const createCors = require('corser').create
+const corser = require('corser')
 const compression = require('compression')
 const hsts = require('hsts')
 const createJsonParser = require('body-parser').json
@@ -13,7 +13,10 @@ const writeRemix = require('./routes/write-remix')
 
 const api = express()
 
-api.use(createCors(['User-Agent']))
+api.use(corser.create({
+	methods: corser.simpleMethods.concat('PATCH'),
+	requestHeaders: corser.simpleRequestHeaders.concat('X-Secret')
+}))
 api.use(compression())
 api.use(hsts({
 	maxAge: 10 * 24 * 60 * 60
