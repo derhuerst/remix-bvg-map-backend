@@ -27,6 +27,7 @@
 		"express": "^4.16.3",
 		"hsts": "^2.1.0",
 		"mz": "^2.7.0",
+		"remix-bvg-map-frontend": "^0.1.0",
 		"serve-static": "^1.13.2",
 		"svg-path-bounds": "^1.0.1",
 		"virtual-dom": "^2.1.1",

@@ -26,10 +26,17 @@ const jsonParser = createJsonParser()
 api.post('/', createRemix)
 api.patch('/:id', jsonParser, writeRemix)
 
+// serve frontend
+const frontendPath = 'remix-bvg-map-frontend/dist/index.html'
+const frontendDir = path.dirname(require.resolve(frontendPath))
+api.use('/edit', serveStatic(frontendDir, {
+	maxAge: 60 * 60 * 1000
+}))
+
 // serve data dir
 api.use(serveStatic(path.join(__dirname, 'data'), {
 	index: false,
-	maxAge: 60 * 60 * 1000
+	maxAge: 5 * 60 * 1000
 }))
 
 api.use((err, req, res, next) => {
