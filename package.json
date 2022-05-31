@@ -17,17 +17,17 @@
 	"bugs": "https://github.com/derhuerst/remix-bvg-map-backend/issues",
 	"license": "ISC",
 	"engines": {
-		"node": ">=7.6"
+		"node": ">=18"
 	},
 	"dependencies": {
 		"body-parser": "^1.18.2",
-		"bvg-topological-map": "^0.2.0",
+		"bvg-topological-map": "^1.0.0",
 		"compression": "^1.7.2",
 		"corser": "^2.0.1",
 		"express": "^4.16.3",
 		"hsts": "^2.1.0",
 		"mz": "^2.7.0",
-		"remix-bvg-map-frontend": "^0.1.0",
+		"remix-bvg-map-frontend": "^1.0.0",
 		"serve-static": "^1.13.2",
 		"svg-path-bounds": "^1.0.1",
 		"virtual-dom": "^2.1.1",
